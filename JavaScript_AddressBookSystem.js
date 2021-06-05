@@ -98,7 +98,7 @@ for (var i = 0; i < contactsArr.length; i++) {
         console.log(contactsArr[i]);
 }
 
-//To update the contact in the array
+//UC-4 To update the contact in the array
 let result = contactsArr.filter((e) => e._firstname == 'Hope');
 console.log(result);
 
@@ -108,6 +108,10 @@ if (result && result.length > 0) {
 }
 console.log("New Array after Updation: ",contactsArr);
 
-//To Delete the contact from the array
+//UC-5 To Delete the contact from the array
 contactsArr = contactsArr.filter((e) => e._firstname != 'Hope');
 console.log("New Array After Delete: ",contactsArr);
+
+//UC-6 To find the Number of contacts in the array
+let numOfContacts = contactsArr.length;
+console.log("Number of Contacts in the AddressBook: "+numOfContacts);
