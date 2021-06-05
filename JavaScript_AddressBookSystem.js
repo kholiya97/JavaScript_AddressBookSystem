@@ -93,11 +93,14 @@ contactsArr.push(addressbook2);
 const addressbook3 = new AddressBook("Hope", "Tyson", "Crossmall", "Blueminton", "Indiana", "430016", "+81 7801456780", "hope.ty@gmail.com");
 contactsArr.push(addressbook3);
 
+console.log("UC=3");
+//UC-3 To store contacts in AddressBook Array
 console.log(contactsArr.length);
 for (var i = 0; i < contactsArr.length; i++) {
         console.log(contactsArr[i]);
 }
 
+console.log("UC=4");
 //UC-4 To update the contact in the array
 let result = contactsArr.filter((e) => e._firstname == 'Hope');
 console.log(result);
@@ -108,10 +111,22 @@ if (result && result.length > 0) {
 }
 console.log("New Array after Updation: ",contactsArr);
 
+console.log("UC=5");
 //UC-5 To Delete the contact from the array
 contactsArr = contactsArr.filter((e) => e._firstname != 'Hope');
 console.log("New Array After Delete: ",contactsArr);
 
+console.log("UC=6");
 //UC-6 To find the Number of contacts in the array
 let numOfContacts = contactsArr.length;
 console.log("Number of Contacts in the AddressBook: "+numOfContacts);
+
+console.log("UC=7");
+//UC-7 To prevent duplicate entry in the Array
+const addressbook4 = new AddressBook("Riley", "Colon", "Crossway", "Havana", "Indiana", "560116", "+61 3017856780", "t.colon@gmail.com");
+if(!contactsArr.some(el => el._firstname == "Riley"))
+     contactsArr.push( addressbook4);
+else
+	console.log("Value already Exists!");
+
+console.log("Unique Array: ",contactsArr);
