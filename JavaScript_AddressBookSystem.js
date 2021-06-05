@@ -138,3 +138,14 @@ console.log("Contact from the addressBook as per Given city: ",checkCity);
 
 let checkState = contactsArr.filter((e) => e._state == 'Kentucky');
 console.log("Contact from the addressBook as per given state: ",checkState);	
+
+console.log("UC=9");
+//UC-9 To check if Particular city exists and return boolean value
+const found = contactsArr.some((e) => e._city == 'Kansas');
+
+if(found == true) {
+	console.log("Contact Exists in the AddressBook!");
+}
+else {
+	console.log("Contact doesn't Exists in the AddressBook!");
+}
