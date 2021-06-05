@@ -169,4 +169,26 @@ for (let i = 0; i < contactsArr.length; i++) {
   if (contactsArr[i]._state == 'Missouri') 
 	  counter1++;
 }
-console.log("Number of contacts for the given State in the AddressBook: "+counter1)
+console.log("Number of contacts for the given State in the AddressBook: "+counter1);
+
+
+console.log("UC=11");
+//UC-11 To sort the array according to FirstName
+function sortContactArray(firstname){
+	var sortOrder = 1;
+	
+	if(firstname[0] == "-") {
+		sortOrder = -1;
+		firstname = firstname.substr(1);
+	}
+	return function (a,b) {
+        if(sortOrder == -1){
+            return b[firstname].localeCompare(a[firstname]);
+        }else{
+            return a[firstname].localeCompare(b[firstname]);
+        }        
+    }
+}
+	
+contactsArr.sort(sortContactArray("_firstname"));
+console.log("After Sorting according to Firstname: ",contactsArr);
