@@ -149,3 +149,24 @@ if(found == true) {
 else {
 	console.log("Contact doesn't Exists in the AddressBook!");
 }
+
+
+console.log("UC=10");
+//UC-10 Count the number of contacts for particular city or state
+
+const addressbook5 = new AddressBook("Jack", "Dosan", "Highpalace", "Kansas", "Kentucky", "890461", "+11 8901409871", "jack123@google.com");
+contactsArr.push(addressbook5);
+
+let counter = 0;
+for (let i = 0; i < contactsArr.length; i++) {
+  if (contactsArr[i]._city == 'Kansas') 
+	  counter++;
+}
+console.log("Number of contacts for the given City in the AddressBook: "+counter);
+
+let counter1 = 0;
+for (let i = 0; i < contactsArr.length; i++) {
+  if (contactsArr[i]._state == 'Missouri') 
+	  counter1++;
+}
+console.log("Number of contacts for the given State in the AddressBook: "+counter1)
